@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Library of Most Controversial Files</h1>
+        <button id="openModal">Add New Book</button>
+    </div>
+    <div class="content">
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <form action="" id="bookForm">
+                <br><br>
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" required><br>
+                <label for="author">Author:</label><br>
+                <input type="text" id="author" name="author" required><br>
+                <label for="pages">Pages:</label><br>
+                <input type="number" id="pages" name="pages" required><br><br>
+                <input type="radio" id="optionA" name="read" value="Finished">
+                <label for="optionA">Finished</label>
+                <input type="radio" id="optionB" name="read" value="Not yet" checked>
+                <label for="optionB">Not yet</label><br><br>
+                <button type="submit" id="addBook">Add Book</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

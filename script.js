@@ -47,7 +47,11 @@ function displayLibrary(){
         myButton1.style.backgroundColor = "green";
         myButton1.classList.add("buttonOne");
         myButton1.addEventListener("click", function() {
-            library.map(value => book.read === "Not yet" ? book.read = "Finished" : book.read = "Not yet")
+            library.map(value => {
+                if(book.id === value.id){
+                    book.read === "Not yet" ? book.read = "Finished" : book.read = "Not yet";
+                }
+            })
             displayLibrary();
         });
 

@@ -44,7 +44,8 @@ function displayLibrary(){
 
         const myButton1 = document.createElement("button");
         myButton1.textContent = "Read Status";
-        myButton1.style.backgroundColor = "green";
+        myButton1.style.backgroundColor = "#1e423f";
+        myButton1.style.color = "#f6f2ea";
         myButton1.classList.add("buttonOne");
         myButton1.addEventListener("click", function() {
             library.map(value => {
@@ -57,7 +58,8 @@ function displayLibrary(){
 
         const myButton2 = document.createElement("button");
         myButton2.textContent = "Remove Book";
-        myButton2.style.backgroundColor = "orangered";
+        myButton2.style.backgroundColor = "#34000b";
+        myButton2.style.color = "#f6f2ea";
         myButton2.addEventListener("click", function() {
             library = library.filter(value => (book.id !== value.id));
             displayLibrary();

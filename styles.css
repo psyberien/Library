@@ -54,6 +54,8 @@ body{
     transform: translate(-50%, -50%);
     height: 50%;
     width: 25%;
+    min-height: 300px;
+    min-width: 300px;
     border-radius: 15px;
     color: white;
 }

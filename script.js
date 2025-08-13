@@ -1,20 +1,23 @@
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = crypto.randomUUID();
-    this.info = function(){
-        return {title: `${this.title}`, author: `${this.author}`, pages: `${this.pages}`, read: `${this.read}`, id: `${this.id}` };
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = crypto.randomUUID();
     }
+
+    info() {
+            return { title: `${this.title}`, author: `${this.author}`, pages: `${this.pages}`, read: `${this.read}`, id: `${this.id}` };
+        };
 }
 
  let library = [];
 
 function addBookToLibrary(title, author, pages, read){
     Object.setPrototypeOf(addBookToLibrary.prototype, Book.prototype);
-    Book.call(this, title, author, pages, read);
-    library.push(this.info());
+    const myBook = new Book(title, author, pages, read);
+    library.push(myBook.info());
 }
 
 
@@ -46,7 +49,6 @@ function displayLibrary(){
         myButton1.textContent = "Read Status";
         myButton1.style.backgroundColor = "#1e423f";
         myButton1.style.color = "#f6f2ea";
-        myButton1.classList.add("buttonOne");
         myButton1.addEventListener("click", function() {
             library.map(value => {
                 if(book.id === value.id){
